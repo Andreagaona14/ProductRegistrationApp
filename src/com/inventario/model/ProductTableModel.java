@@ -101,13 +101,13 @@ public class ProductRegistrationFrame extends JFrame {
         txtQuantity.setText("");
     }
 
-
+    // Clase para el renderer de la tabla
     private class ProductTableCellRenderer extends DefaultTableCellRenderer {
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
             Component cell = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
 
-
+// Cambiar el color de fondo según el precio
             if (column == 1) { // Suponiendo que la columna 1 es el precio
                 double price = (double) table.getValueAt(row, column);
                 if (price > 100) {
