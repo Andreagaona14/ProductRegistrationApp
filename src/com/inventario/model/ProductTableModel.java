@@ -19,7 +19,7 @@ public class ProductRegistrationFrame extends JFrame {
     private int productIdCounter = 1; // Para asignar IDs únicos
 
     public ProductRegistrationFrame() {
-        //Constructor de la clase desde aqui
+        //Constructor de la clase 
 
         setTitle("Registro de Productos");
         setSize(600, 400);
