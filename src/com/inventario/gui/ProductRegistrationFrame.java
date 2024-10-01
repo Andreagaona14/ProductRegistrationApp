@@ -48,10 +48,13 @@ public class ProductTableModel extends AbstractTableModel {
             default: return null;
         }
     }
+    //Devuelve el valor de una celda en especifico
 
     public void addProduct(Product product) {
         productList.add(product);
         fireTableRowsInserted(productList.size() - 1, productList.size() - 1);
     }
+    //Método para agregar un producto a la lista
 }
+
 
