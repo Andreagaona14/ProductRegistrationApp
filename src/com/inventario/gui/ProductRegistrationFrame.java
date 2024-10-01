@@ -4,6 +4,7 @@ package com.inventario.model;
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
 import java.util.ArrayList;
+//Importación de las clases para la interfaz
 
 public class ProductTableModel extends AbstractTableModel {
     private final List<Product> productList;
