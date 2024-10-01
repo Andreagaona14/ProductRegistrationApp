@@ -19,7 +19,7 @@ public class ProductRegistrationFrame extends JFrame {
     private int productIdCounter = 1; // Para asignar IDs únicos
 
     public ProductRegistrationFrame() {
-        //Constructor de la clase 
+        //Constructor de la clase
 
         setTitle("Registro de Productos");
         setSize(600, 400);
@@ -77,7 +77,7 @@ public class ProductRegistrationFrame extends JFrame {
         double price;
         int quantity;
 
-        // Validación de  entrada
+// Validación de  entrada
         if (name.isEmpty() || txtPrice.getText().isEmpty() || txtQuantity.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios", "Error", JOptionPane.ERROR_MESSAGE);
             return;
@@ -91,23 +91,23 @@ public class ProductRegistrationFrame extends JFrame {
             return;
         }
 
-        // Crear producto y agregarlo a la tabla si las validaciones son exitosas
+// Crear producto y agregarlo a la tabla si las validaciones son exitosas
         Product product = new Product(productIdCounter++, name, price, quantity);
         tableModel.addProduct(product);
 
-        // Limpiar campos
+// Limpiar campos
         txtName.setText("");
         txtPrice.setText("");
         txtQuantity.setText("");
     }
 
-    // Clase para el renderer de la tabla
+
     private class ProductTableCellRenderer extends DefaultTableCellRenderer {
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
             Component cell = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
 
-            // Cambiar el color de fondo según el precio
+
             if (column == 1) { // Suponiendo que la columna 1 es el precio
                 double price = (double) table.getValueAt(row, column);
                 if (price > 100) {
