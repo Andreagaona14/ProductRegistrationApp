@@ -6,7 +6,11 @@ import java.util.List;
 import java.util.ArrayList;
 //Importación de las clases para la interfaz
 
+
+//Se declara la clase y se extiende, esta clase se va a utilizar para datos de una tabla
 public class ProductTableModel extends AbstractTableModel {
+
+    //Definición de atributos
     private final List<Product> productList;
     private final String[] columnNames = {"ID", "Nombre", "Precio", "Cantidad"};
 
