@@ -14,6 +14,8 @@ public class ProductTableModel extends AbstractTableModel {
     private final List<Product> productList;
     private final String[] columnNames = {"ID", "Nombre", "Precio", "Cantidad"};
 
+
+    //Construtor de la clase
     public ProductTableModel() {
         this.productList = new ArrayList<>();
     }
@@ -32,6 +34,8 @@ public class ProductTableModel extends AbstractTableModel {
     public String getColumnName(int index) {
         return columnNames[index];
     }
+
+    //Métodos que devuelven el número de filas, número de columnas y el nombre de la columna
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
